@@ -13,6 +13,7 @@ const ChangePasswordScreen = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
 
+  const ref_input2 = React.useRef();
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()}>

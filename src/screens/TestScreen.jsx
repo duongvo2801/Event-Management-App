@@ -4,6 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import IconButton from '../components/common/IconButton';
 import IconTextButton from '../components/common/IconTextButton';
 import { Color, Padding, FontSize } from '../components/styles/GlobalStyles';
+import Icon from '../components/common/Icon';
 
 const TestScreen = () => {
   const handleButtonPress = () => {
@@ -13,12 +14,28 @@ const TestScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Icon 
+        source={require('../assets/icons/BadgeOutline.png')}
+        color={Color.primary}
+        size={'small'}
+      />
+      <Icon 
+        source={require('../assets/icons/BadgeOutline.png')}
+        color={Color.secondary}
+      />
+      <Icon 
+        source={require('../assets/icons/Check.png')}
+      />
       <IconButton
         onPress={handleButtonPress}
         iconSource={require('../assets/icons/BadgeOutline.png')}
-        iconColor={Color.neutral4}
-        size="small"
-        buttonColor={Color.secondary}
+        style={styles.buttonStyle}
+        showShadow
+      />
+      <IconButton
+        onPress={handleButtonPress}
+        iconSource={require('../assets/icons/BadgeOutline.png')}
+        isSizeSmall
         style={styles.buttonStyle}
       />
 
@@ -27,11 +44,11 @@ const TestScreen = () => {
         label="Button 1"
         iconLeft={require('../assets/icons/Plus.png')}
         iconRight={require('../assets/icons/BadgeOutline.png')}
-        textColor={Color.neutral1}
         buttonColor={Color.primary}
         showShadow
         isSmall={false}
         isFillLayout={false}
+        style={styles.buttonStyle}
       />
 
       <IconTextButton
@@ -42,6 +59,7 @@ const TestScreen = () => {
         buttonColor={Color.secondary}
         showShadow
         isFillLayout={false}
+        style={styles.buttonStyle}
       />
 
       <IconTextButton
@@ -64,7 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   buttonStyle: {
-    marginTop: 20,
+    marginBottom: 16,
   },
 });
 

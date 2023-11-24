@@ -10,6 +10,7 @@ import {
   AddEmployee,
   AddEvent,
   DetailEventScreen,
+  DetailProfileScreen,
 } from '../screens';
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,11 @@ const AuthNavigation = () => {
       <Stack.Screen name="AddEmployee" component={AddEmployee} options={{ headerShown: false }} />
       <Stack.Screen name="AddClient" component={AddClient} options={{ headerShown: false }} />
       <Stack.Screen name="AddEvent" component={AddEvent} options={{ headerShown: false }} />
+      <Stack.Screen
+        name="DetailProfileScreen"
+        component={DetailProfileScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="DetailEventScreen"
         component={DetailEventScreen}

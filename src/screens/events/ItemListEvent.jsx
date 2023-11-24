@@ -69,14 +69,9 @@ const styles = StyleSheet.create({
   cardEvent: {
     borderRadius: Border.br_base,
     alignSelf: 'stretch',
-    backgroundColor: Color.colorWhite,
     height: 148,
     overflow: 'hidden',
-    elevation: 5,
-    shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
+    elevation: 3,
   },
   avatarIconLayout: {
     height: 28,
